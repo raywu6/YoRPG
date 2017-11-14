@@ -1,4 +1,4 @@
-/**********************************************
+  /**********************************************
  * class Character -- superclass for battling entities
  *  in Ye Olde RPG
  * ---
@@ -9,10 +9,11 @@ public class Character
 {
 
   //this feels like a bad idea... but the compiler made me do it!
-  public int _hitPts;
-  public int _strength;
-  public int _defense;
-  public double _attack;
+  //v3 - but now we learned about the protected keyword so it's all okay
+  protected int _hitPts;
+  protected int _strength;
+  protected int _defense;
+  protected double _attack;
 
 
   // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
