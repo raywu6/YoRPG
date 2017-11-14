@@ -1,9 +1,9 @@
-// Kerwin Chen (with Thet Zaw, Raymond Wu -- team TRK)
+// Raymond Wu (with Thet Zaw, Kerwin Chen -- team TRK)
 // APCS1 pd1
-// HW31 -- Ye Olde Role Playing Game, Expanded
-// 2017-11-13
+// HW32 -- Ye Olde Role Playing Game, Unchained
+// 2017-11-14
 
-public class Exxod  extends Protagonist
+public class Exxod extends Protagonist
 {
   // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
   private String _name = "Guard";
@@ -41,11 +41,29 @@ public class Exxod  extends Protagonist
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+  //prepare an Exxod for a special attack
+  public void specialize()
+  {
+    _attack = .75;
+    _defense = 20;
+  }
+
+
+  //revert to normal mode
+  public void normalize()
+  {
+    _attack = .4;
+    _defense = 40;
+  }
+
+
   /*=============================================
     String about() -- Who am I?
       returns String to describe this type of Protagonist.
     =============================================*/
-  public static String about()
+
+  // v4 - no longer static, else cannot override an abstract method
+  public String about()
   {
     return "Exxod is the Master of The Guard. Exxod serves as a near impenetrable Gatekeeper. Their special attribute is _defense.";
   } // end about()

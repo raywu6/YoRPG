@@ -69,7 +69,7 @@ public class YoRPG
     }
     catch ( IOException e ) { }
 
-    s = "Intrepid protagonist, what doth thy call thyself? (State your name): ";
+    s = "\nIntrepid protagonist, what doth thy call thyself? (State your name): ";
     System.out.print( s );
 
     try {
@@ -78,7 +78,7 @@ public class YoRPG
     catch ( IOException e ) { }
 
     // v3 - Select protagonist type
-    s = "Intrepid protagonist, what doth thy be? \n";
+    s =  "\nIntrepid protagonist, what doth thy be? \n";
     s += "\t1: Dothraki\n";
     s += "\t2: Exxod\n";
     s += "\t3: Vanguard\n";
@@ -95,18 +95,33 @@ public class YoRPG
     if ( typeProtagonist == 1 )
     {
       pat = new Dothraki( name );
+      s = "\n";
+      s += pat.about();
+      System.out.println( s );
     }
     else if ( typeProtagonist == 2 )
     {
       pat = new Exxod( name );
+      s = "\n";
+      s += pat.about();
+      System.out.println( s );
     }
     else if ( typeProtagonist == 3 )
     {
       pat = new Vanguard( name );
+      s = "\n";
+      s += pat.about();
+      System.out.println( s );
     }
     else  // plain old Protagonist
     {
-      pat = new Protagonist( name );
+      // v4 - no longer  pat = new Protagonist ( name );
+      //      because cannot instantiate abstract class
+      System.out.println( "\nYou didn't follow instructions. So here is a Dorthraki warrior!" );
+      pat = new Dothraki( name );
+      s = "\n";
+      s += pat.about();
+      System.out.println( s );
     }
 
   }//end newGame()

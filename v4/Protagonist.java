@@ -4,7 +4,7 @@
  * Clyde "Thluffy" Sinclair
  **********************************************/
 
-public class Protagonist extends Character
+public abstract class Protagonist extends Character
 {
   // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
   private String _name = "J. Doe";
@@ -44,8 +44,8 @@ public class Protagonist extends Character
   /*=============================================
     int attack(Monster) -- simulates attack on instance of class Monster
     pre:  Input not null
-    post: Calculates damage to be inflicted, flooring at 0. 
-    Calls opponent's lowerHP() method to inflict damage. 
+    post: Calculates damage to be inflicted, flooring at 0.
+    Calls opponent's lowerHP() method to inflict damage.
     Returns damage dealt.
     =============================================*/
   public int attack( Monster opponent )
@@ -64,18 +64,13 @@ public class Protagonist extends Character
 
 
   //prepare a Protagonist for a special attack
-  public void specialize()
-  {
-    _attack = .75;
-    _defense = 20;
-  }
+  public abstract void specialize();
 
 
   //revert to normal mode
-  public void normalize()
-  {
-    _attack = .4;
-    _defense = 40;
-  }
+  public abstract void normalize();
+
+
+  public abstract String about();
 
 }//end class Protagonist
