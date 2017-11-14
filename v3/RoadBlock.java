@@ -6,7 +6,6 @@
 public class RoadBlock extends Monster
 {
   // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
-  private String _name = "Yellow";
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

@@ -36,6 +36,11 @@ public class Dothraki extends Protagonist
   }
 
 
+  // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
+  public String getName() { return _name; }
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
   /*=============================================
     String about() -- Who am I?
       returns String to describe this type of Protagonist.

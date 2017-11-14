@@ -6,7 +6,6 @@
 public class GlassCannon extends Monster {
 
     //~~~~~~~~~~~Instance Variables~~~~~~~~~~~~~~~
-    private String _name = "Glass";
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -16,11 +15,12 @@ public class GlassCannon extends Monster {
     post: initializes instance vars.
     =============================================*/
 
-    public GlassCannon() {
-	_hitPts = 100;
-	_strength = 500;
-	_defense = 10;
-	_attack = .4;
+    public GlassCannon()
+    {
+    	_hitPts = 100;
+    	_strength = 500;
+    	_defense = 10;
+    	_attack = .4;
     }
 
     /*=============================================
@@ -29,18 +29,19 @@ public class GlassCannon extends Monster {
     post: initializes instance vars. _name is set to input String.
     =============================================*/
 
-    public GlassCannon( String name) {
-	this();
-	_name = name;
-
+    public GlassCannon( String name)
+    {
+    	this();
+    	_name = name;
     }
 
   /*=============================================
   String about() -- Who am I?
   returns String to describe this type of Protagonist.
   =============================================*/
-    public static String about() { 
-    return "GlassCannons attack super hard, but are also super frail. Their special attribute is _strength.";
-  } // end about()
+    public static String about()
+    {
+      return "GlassCannons attack super hard, but are also super frail. Their special attribute is _strength.";
+    } // end about()
 
-} // end Monster > RoadBlock class
+} // end Monster > GlassCannon class

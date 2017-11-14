@@ -16,13 +16,12 @@ public class Vanguard extends Protagonist {
     post: initializes instance vars.
     =============================================*/
 
-    public Vanguard() {
-
-	_hitPts = 500;
-	_strength = 100;
-	_defense = 40;
-	_attack = .4;
-
+    public Vanguard()
+    {
+    	_hitPts = 500;
+    	_strength = 100;
+    	_defense = 40;
+    	_attack = .4;
     }
 
     /*=============================================
@@ -31,10 +30,16 @@ public class Vanguard extends Protagonist {
     post: initializes instance vars. _name is set to input String.
     =============================================*/
 
-    public Vanguard(String name) {
-	this();
-	_name = name;
+    public Vanguard(String name)
+    {
+    	this();
+    	_name = name;
     }
+
+
+    // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
+    public String getName() { return _name; }
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
     /*=============================================
@@ -42,10 +47,9 @@ public class Vanguard extends Protagonist {
       returns String to describe this type of Protagonist.
     =============================================*/
 
-    public static String about() {
-
-	return "Vanguards are bulky. Vanguards take a while to fall. Their special attribute is _hitPts";
-
+    public static String about()
+    {
+	     return "Vanguards are bulky. Vanguards take a while to fall. Their special attribute is _hitPts";
     } //end about()
 
 }//end Protagonist > Vanguard class
