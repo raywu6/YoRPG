@@ -6,7 +6,6 @@
 public class Bakeneko extends Monster
 {
   // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
-  private String _name = "Roar";
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

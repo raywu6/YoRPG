@@ -36,6 +36,11 @@ public class Exxod  extends Protagonist
   }
 
 
+  // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
+  public String getName() { return _name; }
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
   /*=============================================
     String about() -- Who am I?
       returns String to describe this type of Protagonist.
@@ -45,4 +50,4 @@ public class Exxod  extends Protagonist
     return "Exxod is the Master of The Guard. Exxod serves as a near impenetrable Gatekeeper. Their special attribute is _defense.";
   } // end about()
 
-} // end Protagonist > Exxod  class
+} // end Monster > Exxod class

@@ -24,6 +24,8 @@ public class YoRPG
   private boolean gameOver;
   private int difficulty;
 
+  private int typeProtagonist;
+
   private InputStreamReader isr;
   private BufferedReader in;
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,8 +47,8 @@ public class YoRPG
 
   /*=============================================
     void newGame() -- gathers info to begin a new game
-    pre:  
-    post: according to user input, modifies instance var for difficulty 
+    pre:
+    post: according to user input, modifies instance var for difficulty
     and instantiates a Protagonist
     =============================================*/
   public void newGame()
@@ -75,8 +77,37 @@ public class YoRPG
     }
     catch ( IOException e ) { }
 
+    // v3 - Select protagonist type
+    s = "Intrepid protagonist, what doth thy be? \n";
+    s += "\t1: Dothraki\n";
+    s += "\t2: Exxod\n";
+    s += "\t3: Vanguard\n";
+    s += "Selection: ";
+    System.out.print( s );
+
+    try {
+	    typeProtagonist = Integer.parseInt( in.readLine() );
+    }
+    catch ( IOException e ) { }
+
+
     //instantiate the player's character
-    pat = new Protagonist( name );
+    if ( typeProtagonist == 1 )
+    {
+      pat = new Dothraki( name );
+    }
+    else if ( typeProtagonist == 2 )
+    {
+      pat = new Exxod( name );
+    }
+    else if ( typeProtagonist == 3 )
+    {
+      pat = new Vanguard( name );
+    }
+    else  // plain old Protagonist
+    {
+      pat = new Protagonist( name );
+    }
 
   }//end newGame()
 
@@ -128,7 +159,7 @@ public class YoRPG
 
 	    //option 1: you & the monster perish
 	    if ( !smaug.isAlive() && !pat.isAlive() ) {
-        System.out.println( "'Twas an epic battle, to be sure... " + 
+        System.out.println( "'Twas an epic battle, to be sure... " +
                             "You cut ye olde monster down, but " +
                             "with its dying breath ye olde monster. " +
                             "laid a fatal blow upon thy skull." );
@@ -153,7 +184,7 @@ public class YoRPG
 
   public static void main( String[] args )
   {
-    //As usual, move the begin-comment bar down as you progressively 
+    //As usual, move the begin-comment bar down as you progressively
     //test each new bit of functionality...
 
     //loading...
