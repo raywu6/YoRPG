@@ -5,7 +5,7 @@
  * Clyde "Thluffy" Sinclair
  **********************************************/
 
-public class Monster extends Character
+public abstract class Monster extends Character
 {
 
   // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
@@ -29,8 +29,8 @@ public class Monster extends Character
   /*=============================================
     int attack(Protagonist) -- simulates attack on a Protagonist
     pre:  Input not null
-    post: Calculates damage to be inflicted, flooring at 0. 
-    Calls opponent's lowerHP() method to inflict damage. 
+    post: Calculates damage to be inflicted, flooring at 0.
+    Calls opponent's lowerHP() method to inflict damage.
     Returns damage dealt.
     =============================================*/
   public int attack( Protagonist opponent )
@@ -46,5 +46,6 @@ public class Monster extends Character
     return damage;
   }//end attack
 
+  public abstract String about();
 
 }//end class Monster

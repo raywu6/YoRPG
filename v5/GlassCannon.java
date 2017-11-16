@@ -5,38 +5,31 @@
 
 public class GlassCannon extends Monster {
 
-    //~~~~~~~~~~~Instance Variables~~~~~~~~~~~~~~~
-    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  //~~~~~~~~~~~Instance Variables~~~~~~~~~~~~~~~
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-    /*=============================================
+  /*=============================================
     default constructor
     pre:  instance vars are declared
     post: initializes instance vars.
     =============================================*/
-
-    public GlassCannon()
-    {
-    	_hitPts = 100;
-    	_strength = 200;
-    	_defense = 10;
-    	_attack = .4;
-    }
-
-    /*=============================================
-    overloaded constructor
-    pre:  instance vars are declared
-    post: initializes instance vars. _name is set to input String.
-    =============================================*/
+  public GlassCannon()
+  {
+  	_hitPts = 100;
+  	_strength = 200;
+  	_defense = 10;
+  	_attack = .4;
+  }
 
 
   /*=============================================
-  String about() -- Who am I?
-  returns String to describe this type of Protagonist.
-  =============================================*/
-    public static String about()
-    {
-      return "GlassCannons attack super hard, but are also super frail. Their special attribute is _strength.";
-    } // end about()
+    String about() -- Who am I?
+    returns String to describe this type of Protagonist.
+    =============================================*/
+  public String about()
+  {
+    return "GlassCannons attack super hard, but are also super frail. Their special attribute is _strength.";
+  } // end about()
 
 } // end Monster > GlassCannon class

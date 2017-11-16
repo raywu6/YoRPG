@@ -23,18 +23,12 @@ public class Bakeneko extends Monster
   }
 
 
-  /*=============================================
-    overloaded constructor
-    pre:  instance vars are declared
-    post: initializes instance vars. _name is set to input String.
-    =============================================*/
-
 
   /*=============================================
     String about() -- Who am I?
-      returns String to describe this type of Protagonist.
+    returns String to describe this type of Protagonist.
     =============================================*/
-  public static String about()
+  public String about()
   {
     return "Bakenekos are weak, but they have many lives. Their special attribute is _hitPts.";
   } // end about()
