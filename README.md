@@ -55,6 +55,7 @@ RoadBlocks can't hit, but RoadBlocks are strong. Their special attribute is &#95
 	- [ ] When the character's life is under 150 HP, you can choose to drink a mysterious liquid, <br>
 		which may kill them, or heal them <br>
 		:warning::warning:like hitting in blackjack with a hand of 17, this is high risk, high reward :warning::warning:
+- [ ] show Protagonist and Monster health after every change
 ### How To Play
 Essentially, you will be able to choose a level of difficulty, along with a name and a Character. <br>
 You will battle Monsters as you encounter them.

@@ -98,6 +98,8 @@ public class YoRPG
     		pat = new Dothraki( name );
     		s = "\n";
     		s += pat.about();
+        s += "\nYour health is: ";
+        s += pat.getHP();
     		System.out.println( s );
 	    }
     	else if ( typeProtagonist == 2 )
@@ -105,6 +107,8 @@ public class YoRPG
     		pat = new Exxod( name );
     		s = "\n";
     		s += pat.about();
+        s += "\nYour health is: ";
+        s += pat.getHP();
     		System.out.println( s );
 	    }
     	else if ( typeProtagonist == 3 )
@@ -112,6 +116,8 @@ public class YoRPG
     		pat = new Vanguard( name );
     		s = "\n";
     		s += pat.about();
+        s += "\nYour health is: ";
+        s += pat.getHP();
     		System.out.println( s );
 	    }
     	else  // plain old Protagonist
@@ -122,6 +128,8 @@ public class YoRPG
     		pat = new Dothraki( name );
     		s = "\n";
     		s += pat.about();
+        s += "\nYour health is: ";
+        s += pat.getHP();
     		System.out.println( s );
 	    }
 
@@ -139,7 +147,7 @@ public class YoRPG
     	int i = 1;
       int d1, d2;
 
-    	int takeRiskSelcetion = 1;
+    	int takeRiskSelection = 1;
       String s;
     	typeMonster = 1 + (int)(Math.random()*3);
     	String smaugName = "";
@@ -156,6 +164,8 @@ public class YoRPG
   		    smaugName = "RoadBlock";
           s = "\n";
   		    s += smaug.about();
+          s += "\nMonster's health is: ";
+          s += smaug.getHP();
   		    System.out.println( s );
     		}
   	    else if ( typeMonster == 2 )
@@ -164,6 +174,8 @@ public class YoRPG
   		    smaugName = "GlassCannon";
           s = "\n";
   		    s += smaug.about();
+          s += "\nMonster's health is: ";
+          s += smaug.getHP();
   		    System.out.println( s );
     		}
   	    else if ( typeMonster == 3 )
@@ -172,6 +184,8 @@ public class YoRPG
   		    smaugName = "Bakeneko";
           s = "\n";
   		    s += smaug.about();
+          s += "\nMonster's health is: ";
+          s += smaug.getHP();
   		    System.out.println( s );
     		}
 
@@ -200,23 +214,33 @@ public class YoRPG
 
       		System.out.println( "\n" + smaugName + " smacked " + pat.getName() + " for " + d2 + " points of damage.");
 
+          s = "\nYour health is now: ";
+          s += pat.getHP() + "\n";
+          s += "Monster's health is now: ";
+          s += smaug.getHP() + "\n";
+          System.out.println( s );
 
           // Health Low. Take Risk?
   		    if (pat.getHP() > 0 && pat.getHP() < 150) {
     		    try {
         			System.out.println("\nYour Health is Low. Take a risk with your mysterious liquid?");
         			System.out.println("\t1: Nay.\n\t2: Aye!" );
-        			takeRiskSelcetion =  Integer.parseInt( in.readLine() );
+        			takeRiskSelection =  Integer.parseInt( in.readLine() );
     		    }
     		    catch ( IOException e ) {}
 
-    		    if ( takeRiskSelcetion == 2 )
+    		    if ( takeRiskSelection == 2 )
             {
         			System.out.println( pat.vulnerary() );
+
+              s = "\nYour health is now: ";
+              s += pat.getHP() + "\n";
+              s += "Monster's health is now: ";
+              s += smaug.getHP() + "\n";
+              System.out.println( s );
   		      }
+
   		    } // end Health-Low-Take-Risk if
-
-
 
   	    }//end while alive loop
 
@@ -226,7 +250,7 @@ public class YoRPG
   		      System.out.println( "'Twas an epic battle, to be sure... " +
 				    "You cut " + smaugName + " down, but " +
 				    "with its dying breath. " + smaugName +
-				    "laid a fatal blow upon thy skull." );
+				    " laid a fatal blow upon thy skull." );
   		      return false;
   	    }
   	    //option 2: you slay the beast
