@@ -71,16 +71,18 @@ public abstract class Protagonist extends Character
     post: Checks whether or not you are below 150 _hitPts
     Then takes a random chance of you either healing or taking 150 damage if you choose to accept
     ======================= */
-    public void vulnerary()
+    public String vulnerary()
     {
-      int luck = (int) (Math.random() * 10) +  1;
+      int luck = 1 + (int) (Math.random() * 10);
 
-      if (luck > 3) {
+      if (luck > 5) {
         _hitPts = _hitPts + 150;
+        return "+150 HP! Lucky you!\n";
   		}
       else
       {
         _hitPts = _hitPts - 150;
+        return "-150 HP! Oof.\n";
       }
     }
 

@@ -137,10 +137,11 @@ public class YoRPG
     public boolean playTurn()
     {
     	int i = 1;
-    	int ml = 1;
-    	int d1, d2;
+      int d1, d2;
+
+    	int takeRiskSelcetion = 1;
+      String s;
     	typeMonster = 1 + (int)(Math.random()*3);
-    	String m;
     	String smaugName = "";
 
     	if ( Math.random() >= ( difficulty / 3.0 ) )
@@ -153,25 +154,25 @@ public class YoRPG
     		{
   		    smaug = new RoadBlock();
   		    smaugName = "RoadBlock";
-          m = "\n";
-  		    m += smaug.about();
-  		    System.out.println( m );
+          s = "\n";
+  		    s += smaug.about();
+  		    System.out.println( s );
     		}
   	    else if ( typeMonster == 2 )
     		{
   		    smaug = new GlassCannon();
   		    smaugName = "GlassCannon";
-          m = "\n";
-  		    m += smaug.about();
-  		    System.out.println( m );
+          s = "\n";
+  		    s += smaug.about();
+  		    System.out.println( s );
     		}
   	    else if ( typeMonster == 3 )
         {
   		    smaug = new Bakeneko();
   		    smaugName = "Bakeneko";
-          m = "\n";
-  		    m += smaug.about();
-  		    System.out.println( m );
+          s = "\n";
+  		    s += smaug.about();
+  		    System.out.println( s );
     		}
 
   	    while( smaug.isAlive() && pat.isAlive() ) {
@@ -205,15 +206,17 @@ public class YoRPG
     		    try {
         			System.out.println("\nYour Health is Low. Take a risk with your mysterious liquid?");
         			System.out.println("\t1: Nay.\n\t2: Aye!" );
-        			ml =  Integer.parseInt( in.readLine() );
+        			takeRiskSelcetion =  Integer.parseInt( in.readLine() );
     		    }
     		    catch ( IOException e ) {}
 
-    		    if ( ml == 2 )
+    		    if ( takeRiskSelcetion == 2 )
             {
-        			pat.vulnerary();
+        			System.out.println( pat.vulnerary() );
   		      }
   		    } // end Health-Low-Take-Risk if
+
+
 
   	    }//end while alive loop
 
