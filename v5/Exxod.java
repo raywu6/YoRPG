@@ -18,9 +18,9 @@ public class Exxod extends Protagonist
   public Exxod()
   {
     _hitPts = 125;
-    _strength = 10;
-    _defense = 1000;
-    _attack = .4;
+    _strength = 120;
+    _defense = 85;
+    _attack = .5;
   }
 
 

@@ -18,7 +18,7 @@ public class GlassCannon extends Monster {
     public GlassCannon()
     {
     	_hitPts = 100;
-    	_strength = 500;
+    	_strength = 200;
     	_defense = 10;
     	_attack = .4;
     }

@@ -19,9 +19,9 @@ public class Vanguard extends Protagonist {
   public Vanguard()
   {
   	_hitPts = 500;
-  	_strength = 100;
+  	_strength = 120;
   	_defense = 40;
-  	_attack = .4;
+  	_attack = .5;
   }
 
   /*=============================================

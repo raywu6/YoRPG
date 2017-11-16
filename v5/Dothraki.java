@@ -18,9 +18,9 @@ public class Dothraki extends Protagonist
   public Dothraki()
   {
     _hitPts = 180;
-    _strength = 1000;
-    _defense = 40;
-    _attack = .4;
+    _strength = 155;
+    _defense = 30;
+    _attack = .6;
   }
 
 

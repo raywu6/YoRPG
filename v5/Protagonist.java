@@ -63,6 +63,24 @@ public abstract class Protagonist extends Character
   }//end attack
 
 
+
+
+   /*==============================
+    void vulnerary() --  Taking a chance to either restore _hitPts or end up harming yourself
+    pre: 
+    post: Checks whether or not you are below 150 _hitPts
+    Then takes a random chance of you either healing or taking 150 damage if you choose to accept
+    ======================= */
+    public void vulnerary() {
+	int tracker = (int) (Math.random() * 10) +  1;
+       if (tracker > 3) {
+	   _hitPts = _hitPts + 150;
+		}
+       else {
+	   _hitPts = _hitPts - 150;
+		}
+    }
+
   //prepare a Protagonist for a special attack
   public abstract void specialize();
 

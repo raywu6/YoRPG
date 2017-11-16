@@ -18,7 +18,7 @@ public class RoadBlock extends Monster
   {
     _hitPts = 10;
     _strength = 130 + (int)( Math.random() * 50 ); // [130, 180)
-    _defense = 200;
+    _defense = 55;
     _attack = .1;
   }
 

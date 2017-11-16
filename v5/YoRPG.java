@@ -137,6 +137,7 @@ public class YoRPG
     public boolean playTurn()
     {
 	int i = 1;
+	int ml = 1;
 	int d1, d2;
 	typeMonster = 1+(int)(Math.random()*3);
 	String m;
@@ -183,10 +184,10 @@ public class YoRPG
 		}
 		catch ( IOException e ) { }
 
-		if ( i == 2 )
-		    pat.specialize();
-		else
-		    pat.normalize();
+		if ( i == 2 ) {
+		    pat.specialize(); }
+		else {
+		    pat.normalize(); }
 
 		d1 = pat.attack( smaug );
 		d2 = smaug.attack( pat );
@@ -196,6 +197,22 @@ public class YoRPG
 
 		System.out.println( "\n" + smaugName + " smacked " + pat.getName() +
 				    " for " + d2 + " points of damage.");
+
+		if (pat.getHP() > 0 && pat.getHP() < 150) {
+		    try {
+			System.out.println("\nYour Health is Low. Take a risk with your mysterious liquid?");
+			System.out.println("\t1: Nay.\n\t2: Aye!" );
+			ml =  Integer.parseInt( in.readLine() );
+		    }
+		    catch ( IOException e ) {}
+
+		    if ( ml == 2 )  {
+			pat.vulnerary(); } 
+
+
+		}
+		    
+		
 	    }//end while
 
 	    //option 1: you & the monster perish
