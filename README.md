@@ -51,7 +51,7 @@ RoadBlocks can't hit, but RoadBlocks are strong. Their special attribute is &#95
 ## Functionality Incorporation
 ### Feature Additions
 - [ ] incorporation of the Monster subclasses
-- [ ] incorporation of a Poison concept
+- [ ] incorporation of a Poison concept :sake:
 	- [ ] When the character's life is under 150 HP, you can choose to drink a mysterious liquid, <br>
 		which may kill them, or heal them <br>
 		- [ ] like hitting in blackjack with a hand of 17, this is high risk, high reward
